@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  tohoho:
+    image: node:12.18.3-alpine3.12
+    container_name: tohoho
+    volumes:
+      - ./tohoho:/tohoho
+    working_dir: /tohoho
+    tty: true
+    ports:
+      - 3100:3100
+
+    #command: yarn start

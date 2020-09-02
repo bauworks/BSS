@@ -1,0 +1,21 @@
+{
+  "name": "tohoho",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tohoho"
+  },
+  "keywords": [
+    "tohoho"
+  ],
+  "author": "bauworks",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.0.2"
+  }
+}
