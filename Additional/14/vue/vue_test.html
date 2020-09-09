@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <p>Vue</p>
+        <div id="todolist">
+            <input  v-model="todoitem" placeholder="edit me">
+            <button v-on:click="addTodo">add todo</button>
+            <ul>
+                <li v-for="item in items" :key="item.message">
+                  {{ item.message }}
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:"#todolist",        // 適用する要素のIDを指定
+            data: {                // 変数定義
+                todoitem:"",
+                items: []
+            },
+            methods: {
+                // メソッド定義(add Todo ボタンが押下された際に動く)
+                addTodo: function() {
+                    this.items.push({message:this.todoitem})
+                }
+            }
+        })
+    </script>
+</html>
