@@ -243,7 +243,7 @@ docker-compose.ymlから設定ファイルを作成するため
 
 これでdevcontainer.jsonが作成されるので編集する。  
 `dockerComposeFile`にyamlファイルが２つ指定されているが、  
-一つ上の階層にあるファイルのみ使用するため、
+一つ上の階層にあるファイルのみ使用するため、  
 設定ファイルと同階層にあるdocker-compose.ymlは削除する。
 
 ```json
