@@ -166,10 +166,8 @@ services:
       - ./tohoho:/tohoho
     working_dir: /tohoho
     tty: true
-    ports:
-      - 3100:3100
-
 ```
+
 
 #### コンテナを立ち上げて中に入ります。
 ```
@@ -211,9 +209,18 @@ function hello(name: string): void {
 let your_name: string = "BauWorks";
 hello(your_name);
 ```
-#### コンパイル
+#### コンパイル（トランスパイル）
 ```
 /tohoho # tsc sample.ts
+```
+sample.js が作られます。
+##### sample.js
+```js
+function hello(name) {
+    console.log("Hello " + name + "!");
+}
+var your_name = "BauWorks";
+hello(your_name);
 ```
 
 #### 実行
