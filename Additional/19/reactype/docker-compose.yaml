@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  baufront:
+    image: node:12.18.3-alpine3.12
+    container_name: baufront
+    volumes:
+      - ./front:/front
+    working_dir: /front
+    tty: true
+    ports:
+      - 3000:3000
+    networks:
+      - baunet
+    #command: yarn start
+
+  bauserver:
+    image: python:3.8.5-alpine3.12
+    container_name: bauserver
+    volumes: 
+      - ./server:/server
+    working_dir: /server
+    tty: true
+    ports:
+      - 9999:9999
+    networks:
+      - baunet
+
+networks:
+  baunet:
+    driver: bridge

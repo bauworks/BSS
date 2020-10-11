@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    hooks:
+        container_name: hooks
+        build:
+            context: .
+            dockerfile: dockerfile
+        volumes:
+            - ./project:/project
+        tty: true
+        ports:
+          - 3000:3000
+
