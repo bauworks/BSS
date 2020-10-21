@@ -11,7 +11,7 @@
 1. [botにゆんたく。Tweet生成AI組込み](#1-botにゆんたく。Tweet生成AI組込み)  
 2. [Docker上でbotを動かす](#2-Docker上でbotを動かす)  
 
-## 1. botにゆんたく。Tweet生成A組込み
+## 1. botにゆんたく。Tweet生成AI組込み
 前編で作成したbotに古川さん作成のTweet生成AIを組み込む
 
 ### ディレクトリ構成
