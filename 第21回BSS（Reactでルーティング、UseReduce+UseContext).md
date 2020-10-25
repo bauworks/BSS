@@ -10,9 +10,11 @@
 
 ## 目次
 1. [react-routerでルーティング](#1-react-routerでルーティング)  
-2. [コンテキストをグローバルに参照](#2-コンテキストをグローバルに参照)  
- 2.1 シンプルにコンテキスト参照<br>
- 2.2 ベストを目指したコンテキスト参照（useReducer + useContext）
+2. [コンテキストをグローバルに参照する](#2-コンテキストをグローバルに参照する)  
+ 2.1 [シンプルにコンテキスト参照](#21-シンプルにコンテキスト参照)<br>
+ 2.2 [ベストプラクティスなコンテキスト参照（useReducer + useContext）](#22-ベストプラクティスなコンテキスト参照（useReducer-+-useContext）)
+3. [参考サイト](#3-参考サイト)
+
 
 ## 1. react-routerでルーティング
 ルーティングとは表示させるページをURLにより切り替える処理のこと。
@@ -102,7 +104,7 @@ export const Page2 = () => {
 ```
 
 
-## 2. コンテキストをグローバルに参照
+## 2. コンテキストをグローバルに参照する
 
 コンテキストとは文脈、前後関係、事情、背景、状況などの意味を持つ英単語。ITの分野では、利用者の意図や状況、環境などの総体を表したり、同じ処理や記述でも状況に応じて動作などが異なる場合に、その選択基準となる判断材料や条件などを指す場合が多い。([IT用語辞典：e-Words](http://e-words.jp/w/%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88.html))
 
@@ -202,7 +204,7 @@ export const CompC:React.FC = () => {
 
 
 
-### 2.2 ベストプラクティスと思われるコンテキスト参照（useReducer + useContext）
+### 2.2 ベストプラクティスなコンテキスト参照（useReducer + useContext）
 
 ### 実行結果
 <img width="320" alt="ベストプラクティスと思われるコンテキスト参照" src="https://user-images.githubusercontent.com/19363285/97110070-7dacd780-171a-11eb-8e33-a1c94d56bab3.gif">
@@ -355,3 +357,11 @@ export const Item = (props: Props) => {
   );
 };
 ```
+
+
+## 3. 参考サイト
+[React Routerでのページ遷移を簡単に説明](https://qiita.com/kuropp/items/0490c26f85bcdd181cb1)
+
+[React hooksを基礎から理解する (useContext編)](https://qiita.com/seira/items/fccdf4e73c59c491558d)
+
+[「Redux よさようなら」最強の React 実装](https://uncle-javascript.com/react-typescript-hooks-best-practice)
