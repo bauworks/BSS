@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    bss21:
+        image: node:12.19.0-alpine3.12
+        container_name: bss21
+        volumes:
+            - ./reactapps:/reactapps
+        working_dir: /reactapps
+        environment:
+            TZ: Asia/Tokyo
+        ports:
+            - 3000:3000
+        tty: true
+
