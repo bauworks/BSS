@@ -488,5 +488,5 @@ console.log( curry_add1(48) )    // 50
 
 
 ### 2.3 参考サイト <a id="2-3"></a>
-[【JavaScript入門】クロージャって一体何？使い方まで徹底解説](https://www.sejuku.net/blog/25026)
-[サルでもわかるカリー化とそのメリット](https://qiita.com/KtheS/items/1a93ba0a6d722a534439)
+* [【JavaScript入門】クロージャって一体何？使い方まで徹底解説](https://www.sejuku.net/blog/25026)
+* [サルでもわかるカリー化とそのメリット](https://qiita.com/KtheS/items/1a93ba0a6d722a534439)
