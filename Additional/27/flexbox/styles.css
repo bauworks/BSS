@@ -1,0 +1,93 @@
+.container {
+    border: 3px solid gray;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.item {
+    border: 2px solid gray;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*** for Container ***/
+/* flex-direction */
+.fd_row {flex-direction: row;}
+.fd_row-reverse {flex-direction: row-reverse;}
+.fd_column {flex-direction: column;}
+.fd_column-reverse {flex-direction: column-reverse;}
+
+/* flex-wrap */
+.fw_nowrap {flex-wrap: nowrap;}
+.fw_wrap {flex-wrap: wrap;}
+.fw_wrap-reverse {flex-wrap: wrap-reverse;}
+
+/* justify-content */
+.jc_flex-start {justify-content: flex-start;}
+.jc_flex-end {justify-content: flex-end;}
+.jc_center {justify-content: center;}
+.jc_space-between {justify-content: space-between;}
+.jc_space-around {justify-content: space-around;}
+
+/* align-items */
+.ai_stretch {align-items: stretch;}
+.ai_flex-start {align-items: flex-start;}
+.ai_flex-end {align-items: flex-end;}
+.ai_center {align-items: center;}
+.ai_baseline {align-items: baseline;}
+
+/* align-content */
+.ac_stretch {align-content: stretch;}
+.ac_flex-start {align-content: flex-start;}
+.ac_flex-end {align-content: flex-end;}
+.ac_center {align-content: center;}
+.ac_space-between {align-content: space-between;}
+.ac_space-around {align-content: space-around;}
+
+
+/* width/height */
+.width_270px {width: 270px;}
+.height_270px {height: 270px;}
+.width_50px {width: 50px;}
+.height_50px {height: 50px;}
+
+/*** for item ***/
+/* order */
+.order_1 {order: 1;}
+.order_2 {order: 2;}
+.order_3 {order: 3;}
+.order_4 {order: 4;}
+.order_5 {order: 5;}
+
+/* flex-grow */
+.flex-grow_1 {flex-grow: 1;}
+.flex-grow_2 {flex-grow: 2;}
+.flex-grow_3 {flex-grow: 3;}
+.flex-grow_4 {flex-grow: 4;}
+
+/* flex-shrink */
+.flex-shrink_1 {flex-shrink: 1;}
+.flex-shrink_2 {flex-shrink: 2;}
+.flex-shrink_3 {flex-shrink: 3;}
+.flex-shrink_4 {flex-shrink: 4;}
+
+/* flex-basis */
+.flex-basis_auto {flex-basis: auto;}
+.flex-basis_20pc {flex-basis: 20%;}
+.flex-basis_30pc {flex-basis: 30%;}
+.flex-basis_40pc {flex-basis: 40%;}
+.flex-basis_80px {flex-basis: 80px;}
+
+/* flex */
+
+/* align-self */
+.as_auto {align-self: auto;}
+.as_flex-start {align-self: flex-start;}
+.as_flex-end {align-self: flex-end;}
+.as_center {align-self: center;}
+.as_baseline {align-self: baseline;}
+.as_stretch {align-self: stretch;}
+
+

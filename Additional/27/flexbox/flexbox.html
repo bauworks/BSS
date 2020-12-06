@@ -1,0 +1,130 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox</title>
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script src="scripts.js?v=1.0"></script>
+</head>
+<body>
+    <b>環境設定</b>
+    <br>
+    コンテナ サイズ :
+    <input id="btnCSZ_0" type="button" value="clear" />
+    <input id="btnCSZ_1" type="button" value="width-270px" />
+    <input id="btnCSZ_2" type="button" value="height-270px" />
+    =>
+    <span id="txtCSZ"></span>
+    <br>
+    アイテム サイズ :
+    <input id="btnISZ_0" type="button" value="clear" />
+    <input id="btnISZ_1" type="button" value="width-50px" />
+    <input id="btnISZ_2" type="button" value="height-50px" />
+    =>
+    <span id="txtISZ"></span>
+    <br>
+    フォント サイズ :
+    <input id="btnFSZ_0" type="button" value="clear" />
+    <input id="btnFSZ_1" type="button" value="A-1 B-2 C-3 D-1 E-2" />
+    =>
+    <span id="txtFSZ"></span>
+    <br>
+    <hr>
+    <b>親要素（Flexコンテナ）に指定するプロパティ</b>
+    <br>
+    flex-direction(並び順) :
+    <input id="btnFD_0" type="button" value="clear" />
+    <input id="btnFD_1" type="button" value="row" />
+    <input id="btnFD_2" type="button" value="row-reverse" />
+    <input id="btnFD_3" type="button" value="column" />
+    <input id="btnFD_4" type="button" value="column-reverse" />
+    =>
+    <span id="txtFD"></span>
+    <br>
+    flex-wrap(折返し) :
+    <input id="btnFW_0" type="button" value="clear" />
+    <input id="btnFW_1" type="button" value="nowrap" />
+    <input id="btnFW_2" type="button" value="rap" />
+    <input id="btnFW_3" type="button" value="wrap-reverse" />
+    =>
+    <span id="txtFW"></span>
+    <br>
+    justify-content(水平位置) :
+    <input id="btnJC_0" type="button" value="clear" />
+    <input id="btnJC_1" type="button" value="flex-start" />
+    <input id="btnJC_2" type="button" value="flex-end" />
+    <input id="btnJC_3" type="button" value="center" />
+    <input id="btnJC_4" type="button" value="space-between" />
+    <input id="btnJC_5" type="button" value="space-around" />
+    =>
+    <span id="txtJC"></span>
+    <br>
+    align-items(垂直位置) :
+    <input id="btnAI_0" type="button" value="clear" />
+    <input id="btnAI_1" type="button" value="stretch" />
+    <input id="btnAI_2" type="button" value="flex-start" />
+    <input id="btnAI_3" type="button" value="flex-end" />
+    <input id="btnAI_4" type="button" value="center" />
+    <input id="btnAI_5" type="button" value="baseline" />
+    =>
+    <span id="txtAI"></span>
+   <br>
+    align-content(行の垂直位置) :
+    <input id="btnAC_0" type="button" value="clear" />
+    <input id="btnAC_1" type="button" value="stretch" />
+    <input id="btnAC_2" type="button" value="flex-start" />
+    <input id="btnAC_3" type="button" value="flex-end" />
+    <input id="btnAC_4" type="button" value="center" />
+    <input id="btnAC_5" type="button" value="space-between" />
+    <input id="btnAC_6" type="button" value="space-around" />
+    =>
+    <span id="txtAC"></span>
+    <hr>
+    <b>子要素（Flexアイテム）に指定するプロパティ</b>
+    <br>
+    order(並び順) :
+    <input id="btnOD_0" type="button" value="clear" />
+    <input id="btnOD_1" type="button" value="1-C 2-B 3-D 4-E 5-A" />
+    =>
+    <span id="txtOD"></span>
+    <br>
+    flex-glow(伸び率) :
+    <input id="btnFG_0" type="button" value="clear" />
+    <input id="btnFG_1" type="button" value="A-3 B-1 C-4 D-2 E-3" />
+    =>
+    <span id="txtFG"></span>
+    <br>
+    flex-shrink(縮み率) :
+    <input id="btnFS_0" type="button" value="clear" />
+    <input id="btnFS_1" type="button" value="A-3 B-1 C-4 D-2 E-3" />
+    =>
+    <span id="txtFS"></span>
+    <br>
+    flex-basis(ベース幅) :
+    <input id="btnFB_0" type="button" value="clear" />
+    <input id="btnFB_1" type="button" value="A-30% B-auto C-40% D-80px E-20%" />
+    =>
+    <span id="txtFB"></span>
+    <br>
+    align-serif(垂直位置) :
+    <input id="btnAS_0" type="button" value="clear" />
+    <input id="btnAS_1" type="button" value="auto" />
+    <input id="btnAS_2" type="button" value="flex-start" />
+    <input id="btnAS_3" type="button" value="flex-end" />
+    <input id="btnAS_4" type="button" value="center" />
+    <input id="btnAS_5" type="button" value="baseline" />
+    <input id="btnAS_6" type="button" value="stretch" />
+    =>
+    <span id="txtAS"></span>
+    <br>
+    <div id="container">
+        <div id="item_a"><p>A</p></div>
+        <div id="item_b"><p>B</p></div>
+        <div id="item_c"><p>C</p></div>
+        <div id="item_d"><p>D</p></div>
+        <div id="item_e"><p>E</p></div>
+    </div>
+</body>
+</html>
