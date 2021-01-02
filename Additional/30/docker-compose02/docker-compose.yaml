@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+    server1:
+        container_name: server1
+        build:
+            context: .
+            dockerfile: dockerfile
+        volumes:
+            - ./work1:/work
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        cap_add:
+            - SYS_ADMIN
+        tty: true
+        ports:
+          - 7771:7771
+        networks:
+          - baunet
+        command: /sbin/init
+
+    server2:
+        container_name: server2
+        build:
+            context: .
+            dockerfile: dockerfile
+        volumes:
+            - ./work2:/work
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        cap_add:
+            - SYS_ADMIN
+        tty: true
+        ports:
+          - 7772:7772
+        networks:
+          - baunet
+        command: /sbin/init
+networks:
+    baunet:
+        driver: bridge
+

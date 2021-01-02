@@ -1,0 +1,13 @@
+FROM centos:8
+RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial && \
+    dnf -y upgrade && \
+    dnf -y install glibc-locale-source && \
+    localedef -f UTF-8 -i ja_JP ja_JP.UTF-8 && \
+    ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+RUN dnf -y install xinetd traceroute telnet nc nmap lsof
+RUN dnf clean all
+RUN systemctl enable xinetd.service
+ENV LANG="ja_JP UTF-8" \
+    LANGUAGE="ja_JP:ja" \
+    LC_ALL="ja_JP.UTF-8" \
+    TZ="Asia/Tokyo"
