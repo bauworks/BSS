@@ -19,8 +19,6 @@ https://qiita.com/yassun-youtube/items/3faee13f87aa63e33ef5
 
 ## 2. todo mvc作成<a id="2"></a>
 
-### Tweet監視用ノードとyunbot実行用ノードをつなげる
-
 ### HTML部分作成
 ```html
 <!-- HTML部 -->
@@ -113,4 +111,4 @@ https://qiita.com/yassun-youtube/items/3faee13f87aa63e33ef5
 ```
 
 ### 実行結果
-![2021-01-05 14 57のイメージ](https://user-images.githubusercontent.com/66286964/103611852-8285d700-4f66-11eb-818e-7a670a9852bd.jpg)
+![2021-01-05 14 57のイメージ](https://user-images.githubusercontent.com/66286964/103611852-8285d700-4f66-11eb-818e-7a670a9852bd.jpg)
