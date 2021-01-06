@@ -81,17 +81,17 @@ uid=1000(guest) gid=1000(guest) groups=1000(guest)
 Netcatは、Unix系OSコマンドラインアプリケーションの一つ。TCPやUDPのパケットを読み書きするバックエンドとして機能するツールで、ネットワークを扱う万能ツールとして知られる。オリジナル版より機能的に優位な派生・互換ツールが開発され、用いられている。
 (Wikipedia)
 
-例(Server1) ：7779ポートでTCPをリッスン
+例(Host1) ：7779ポートでTCPをリッスン
 ```sh
 $ nc -kl 7779
-Hello, I am server2   #接続してきた端末からの入力情報が表示される
+Hello, I am host2   #接続してきた端末からの入力情報が表示される
  :
 ```
 
-例(Server2) ：server1の7779ポートに接続し、文字列送信
+例(Host2) ：host1の7779ポートに接続し、文字列送信
 ```sh
-$ nc server1 7779
-Hello, I am server2   #Enter入力でServer1で左記文字列が表示される
+$ nc host1 7779
+Hello, I am host2   #Enter入力でServer1で左記文字列が表示される
 ^C
 ```
 
