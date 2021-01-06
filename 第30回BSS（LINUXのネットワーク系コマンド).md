@@ -24,7 +24,7 @@
 　pingは、IPのエラーメッセージなどを返すプロトコル「ICMP」（Internet Control Message Protocol）を使用して、ネットワーク上のホストの疎通状況やエラーの内容を確認するコマンドだ。
 （@IT）
 
-例：www.yahoo.co.jpにPingで疎通確認
+例\：www.yahoo.co.jpにPingで疎通確認
 ```sh
 $ ping www.yahoo.co.jp
 PING edge12.g.yimg.jp (182.22.25.252): 56 data bytes
