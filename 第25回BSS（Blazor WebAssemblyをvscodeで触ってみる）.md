@@ -1,4 +1,4 @@
-# 第25回BSS（Blazor WebAssemblyをvscodeで触ってみる)
+# 第25回BSS（Blazor WebAssemblyをvscodeで触ってみる）
 
 日時　：2020年 11月18日(水)  
 参加者：古川・有川・森(発表者)
