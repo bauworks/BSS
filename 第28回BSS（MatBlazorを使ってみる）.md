@@ -95,7 +95,7 @@ $ dotnet add package MatBlazor
 ### MatCheckbox
 
 チェックボックスのコンポーネント。  
-[第25回BSS](./第25回BSS（Blazor-WebAssemblyをvscodeで触ってみる）.md)で作成したTodo画面では入力欄のとこにチェックボックスを付けてなかったが今回追加。
+[第25回BSS](./第25回BSS（Blazor&#32;WebAssemblyをvscodeで触ってみる）.md)で作成したTodo画面では入力欄のとこにチェックボックスを付けてなかったが今回追加。
 
 | Name        | Description            |
 | ----------- | ---------------------- |
@@ -236,7 +236,7 @@ private string GetCompletedTodoItemCssClass(bool isDone)
 
 
 ■ TodoMat.cs
-```
+```cs
 /// <summary>
 /// 完了済みのTodoアイテムが存在するかどうか
 /// </summary>
