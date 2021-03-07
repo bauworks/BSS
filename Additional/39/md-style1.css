@@ -1,0 +1,40 @@
+h1 {
+    counter-reset: chapter;
+    padding-bottom: 0.3em;
+    line-height: 1.2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+h2 {
+    counter-reset: sub-chapter;
+    padding-bottom: 0.3em;
+    line-height: 1.2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: whitesmoke;
+}
+
+h3 {
+    counter-reset: section;
+    text-decoration: underline;
+}
+
+h4 {
+    text-decoration: underline dotted;
+}
+
+h2::before {
+    counter-increment: chapter;
+    content: counter(chapter) ". ";
+   }
+h3::before {
+    counter-increment: sub-chapter;
+    content: counter(chapter) "."counter(sub-chapter)". ";
+}
+h4::before {
+    counter-increment: section;
+    content: counter(chapter) "."counter(sub-chapter)"."counter(section)" ";
+}
+
