@@ -1,4 +1,4 @@
-<link href="Additional/39/md-style1.css" rel="stylesheet"></link>
+<link href="Additional/39/md-style.css" rel="stylesheet"></link>
 
 # 第39回BSS（マークダウンでドキュメント作成)
 
@@ -6,33 +6,30 @@
 参加者：古川(発表者)・有川・森
 
 ---
+***今回の趣旨***
+* マークダウンを効率的に編集するためのプラグインと使い方
+* マークダウンで図を書く（mermaid.js）
+
+<br>
 
 ***目次***
-- [第39回BSS（マークダウンでドキュメント作成)](#第39回bssマークダウンでドキュメント作成)
   - [VSコードで効率よくマークダウン編集](#vsコードで効率よくマークダウン編集)
     - [スタイルシートを読み込む (VSプレビュー)](#スタイルシートを読み込む-vsプレビュー)
-    - [使い方](#使い方)
     - [Markdown All in One (VSプラグイン)](#markdown-all-in-one-vsプラグイン)
       - [よく使いそうなショートカットキー一覧](#よく使いそうなショートカットキー一覧)
       - [画像貼り付けの例](#画像貼り付けの例)
       - [目次を生成する](#目次を生成する)
-        - [使い方](#使い方-1)
       - [mdファイルを開いたときに自動でサイドバーにプレビューを表示する](#mdファイルを開いたときに自動でサイドバーにプレビューを表示する)
-        - [使い方](#使い方-2)
     - [Excel to Markdown table (VSプラグイン)](#excel-to-markdown-table-vsプラグイン)
-      - [使い方](#使い方-3)
     - [Markdown Preview Mermaid Support（VSプラグイン）](#markdown-preview-mermaid-supportvsプラグイン)
     - [Markdown Preview Enhanced（VSプラグイン）](#markdown-preview-enhancedvsプラグイン)
+    - [参考サイト](#参考サイト)
   - [テキストベースでフローチャートやシーケンス図を書く（mermaid.js）](#テキストベースでフローチャートやシーケンス図を書くmermaidjs)
     - [書き方](#書き方)
       - [マークダウン](#マークダウン)
-        - [コード例](#コード例)
       - [HTML](#html)
-        - [コード例](#コード例-1)
     - [フローチャートの例](#フローチャートの例)
       - [グラフの方向](#グラフの方向)
-        - [LR：レフトからライト](#lrレフトからライト)
-        - [TB：トップからボトム](#tbトップからボトム)
       - [ノード形状](#ノード形状)
       - [リンク](#リンク)
       - [グルーピング](#グルーピング)
@@ -44,8 +41,10 @@
       - [ライフライン（簡単Ver）](#ライフライン簡単ver)
       - [メモ](#メモ)
       - [複合フラグメント](#複合フラグメント)
-    - [参考サイト](#参考サイト)
-
+    - [ガントチャートの例](#ガントチャートの例)
+      - [簡単な例](#簡単な例-1)
+      - [休日、祝日を考慮](#休日祝日を考慮)
+    - [参考サイト](#参考サイト-1)
 <br>
 
 ---
@@ -56,13 +55,12 @@
 やっぱ見た目は大事デス。  
 ただし、この後に出てくる「Markdown Preview Enhanced」のプレビューでは有効にならない。
 
-### 使い方
+**使い方**  
 1. CSSファイルを作成（例: md-style0.css）
 2. 本文の上の方に以下を埋め込む
 ```html
 <link href="md-style.css" rel="stylesheet"></link>
 ```
-
 <br>
 
 ---
@@ -91,11 +89,10 @@
 
    実行例：  
    ![BAUWORKSのアイコン](https://avatars.githubusercontent.com/u/19363285?s=460&u=09e2feafdff831b8e54a253698391876870fbc06&v=4)
-
 <br>
 
 #### 目次を生成する
-##### 使い方
+**使い方**  
 コマンドパレット： Ctrl + Shift + "P"
 ~~~
  Markdown All in One: Create Table of Contents 
@@ -104,7 +101,7 @@
 
 #### mdファイルを開いたときに自動でサイドバーにプレビューを表示する
 
-##### 使い方
+**使い方**  
 設定： Command + ","
 ~~~
  Markdown > Extension > Preview: Auto Show Preview To Side  
@@ -120,7 +117,7 @@ Excelでコピーした範囲をマークダウン形式で貼り付けること
 Windowsでは便利。Macではあまり使わないかも。
 
 
-#### 使い方
+**使い方**  
  Excelで作成したテーブルをコピーして `Shift + Alt + V` で貼り付け。
 
 
@@ -138,8 +135,6 @@ Windowsでは便利。Macではあまり使わないかも。
 ![Markdown Preview Mermaid Support](https://user-images.githubusercontent.com/19363285/110238797-f81e1b80-7f86-11eb-9b42-e60f13e14dd4.png)
 
 プレビューでmermaid.jsで書いた図を解釈してくれる。  
-
-
 <br>
 
 ---
@@ -150,6 +145,10 @@ Windowsでは便利。Macではあまり使わないかも。
 機能強化されたプレビューが追加される。  
 もちろんmermaid.jsで書いた図も解釈してくれる。  
 `Markdown Preview Mermaid Support` はデフォルトで搭載されているプレビューのサポート機能なので、mermaid.jsで書かれた図の描画だけが目的なら、このプラグインは使わなくていいかも。
+<br>
+
+### 参考サイト
+* [Markdownでスタイルシート](https://qiita.com/skkzsh/items/99e30bbbfe69f379b583)  
 
 <br>
 <br>
@@ -160,17 +159,23 @@ Windowsでは便利。Macではあまり使わないかも。
 ### 書き方
 #### マークダウン
    コードスタイル（mermaid）で記述
-##### コード例
-   \`\`\`mermaid<br>graph LR<br>A-->B<br>\`\`\`
 
+```
+\```mermaid
+graph LR
+A-->B
+\```
+```
+※ エスケープ記号`\`は不要
+
+以下のように表示される。
 ```mermaid
 graph LR
 A-->B
 ```
-
+<br>
 
 #### HTML
-##### コード例
 ```html
 <!DOCTYPE html>
 <html lang="ja">
@@ -187,30 +192,29 @@ A-->B
 </body>
 </html>
 ```
-
 <br>
 
+---
 ### フローチャートの例
 
 #### グラフの方向
 
-##### LR：レフトからライト
+LR：レフトからライト
 ```mermaid
 graph LR
     ID1[ノード1] -- リンク --> ID2((ノード2))
     ID3 --> ID2
 ```
-<br>
 
-##### TB：トップからボトム
+TB：トップからボトム
 ```mermaid
 graph TB
     ID1[ノード1] -- リンク --> ID2((ノード2))
     ID3 --> ID2
 
 ```
+<br>
 
----
 #### ノード形状
 ```mermaid
 graph TB
@@ -226,9 +230,8 @@ graph TB
     id11((丸はラベルが長いとノードがすごく大きくなって見づらい))
     id12((適当に改行を<br/>入れた方が<br/>見やすいと<br/>思います))
 ```
+<br>
 
-
----
 #### リンク
 ```mermaid
 graph LR
@@ -250,8 +253,8 @@ graph LR
     G== 太線矢印 ==>H
     G==>|太線矢印|H
 ```
+<br>
 
----
 #### グルーピング
 ```mermaid
 graph TB
@@ -263,10 +266,9 @@ graph TB
         s2a --> s1b
     end
 ```
-<br><br>
 
 
-* ノードは最初にIDの記載が現れた subgraph 内に配置されるので左記にグルーピングしてからリンク定義するとよい。
+ノードは最初にIDの記載が現れた subgraph 内に配置されるので左記にグルーピングしてからリンク定義するとよい。
 ```mermaid
 graph LR
     subgraph s1
@@ -285,9 +287,9 @@ graph LR
     end
     s3a --> s4a
 ```
+<br>
 
 
----
 #### 装飾
 * ノードの装飾：`style`
 * リンクの装飾：`linkStyle`
@@ -328,8 +330,8 @@ participant J as John
     A ->>  J : Hello John, how are you?
     J -->> A : Great!
 ```
+<br>
 
----
 #### 線の書き方（実線、点線、矢印、X矢印）
 ```mermaid
 sequenceDiagram
@@ -341,8 +343,8 @@ sequenceDiagram
     B --x A:BからAへ×付きの点線矢印
     B->>B:ループ
 ```
+<br>
 
----
 #### ライフライン
 ```mermaid
 sequenceDiagram
@@ -351,8 +353,8 @@ sequenceDiagram
     B-->>A:Great!
     deactivate B 
 ```
+<br>
 
----
 #### ライフライン（簡単Ver）
 ```mermaid
 sequenceDiagram
@@ -361,8 +363,8 @@ sequenceDiagram
     John  -->> -Alice: Hi Alice, I can hear you!
     John  -->> -Alice: I feel great!
 ```
+<br>
 
----
 #### メモ
 
 Note [Position] [Actor]
@@ -382,7 +384,6 @@ sequenceDiagram
     Note right of Michael: Sorry
 ```
 
----
 #### 複合フラグメント
 
 
@@ -417,6 +418,73 @@ sequenceDiagram
     end
 ```
 
+<br>
+
+---
+### ガントチャートの例
+#### 簡単な例
+```mermaid
+gantt
+    title work
+    dateFormat YYYY-MM-DD
+    axisFormat  %m/%d
+
+    section work_A
+    準備    :a1 ,2019-12-12 ,1d
+    作業    :a2 ,after a1 ,3d
+    リリース :a3 ,after a2 ,2d
+
+    section work_B
+    準備    :b1 ,after a2 ,3d
+    作業_1  :b2 ,after b1 ,4d
+    作業_2  :b3 ,after b1 ,3d
+    リリース :b4 ,after b2 ,1d
+
+    section work_C
+    準備    :c1 ,after b4 ,1d
+    作業    :c2 ,after c1 ,2d
+    レビュー :c3 ,after c2 ,1d
+    リリース :c4 ,after c3 ,1d
+```
+
+<br>
+
+#### 休日、祝日を考慮
+
+`excludes` に週末なら `weekends` 、祝日は日付を直接指定する。  
+
+
+```mermaid
+gantt
+    title dev schedule(休日祝日考慮)
+    dateFormat YYYY-MM-DD
+    axisFormat  %m/%d
+    excludes weekends 2020-04-29  2020-05-02 2020-05-03 2020-05-04 2020-05-05 2020-05-06 2020-07-23 2020-07-24 2020-08-10 2020-09-21 2020-09-22 2020-11-03 2020-11-23
+
+    section HTML
+        設計&開発ドキュメント作成: design_and_doc, 2020-04-13, 3d
+
+    section Migration
+        設計: desgin_migration, after design_and_doc, 2d
+        実装: imple_migration, after imple_api, 5d
+
+    section REST API
+        設計: design_api, after desgin_migration, 5d
+        実装: imple_api, after design_api, 5d
+        テスト: test_api, after imple_api, 5d
+
+    section Android
+        実装: imple_android, after test_api, 2w
+
+    section iOS
+        実装: imple_ios, after imple_android, 2w
+```
+<br>
+
+---
 ### 参考サイト
-[mermaid.jsのフローチャートの書き方](https://ryuta46.com/516)  
-[VScodeでmermaidを使ったmarkdown資料作りメモ](https://qiita.com/ZOOSHIMA/items/693ee8fd93146dd69b0e)
+* [mermaid.jsのフローチャートの書き方](https://ryuta46.com/516)  
+* [VScodeでmermaidを使ったmarkdown資料作りメモ](https://qiita.com/ZOOSHIMA/items/693ee8fd93146dd69b0e)  
+* [Mermaid.js コードでガントチャートを書く 簡易編](https://qiita.com/miriwo/items/7df0024d4098302e5721)  
+* [mermaidのガントチャートで休日と祝日を考慮して表示する方法](https://qwx.jp/mermaid-ganttchart-excludes-weekends-and-holiday/)  
+
