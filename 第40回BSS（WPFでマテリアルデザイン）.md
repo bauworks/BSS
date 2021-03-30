@@ -19,7 +19,7 @@
 WPFアプリのデザインをマテリアルデザインにしてくれるToolkit
 
 ## 2. MaterialデザインなしのWPFアプリ <a id="2"></a>
-↓こんなかんじ
+↓こんなかんじ  
 ![画像1](https://user-images.githubusercontent.com/66286964/112943991-2dc0b980-916d-11eb-88cd-50b69cfe5966.png)
 
 
