@@ -19,7 +19,7 @@
 WPFアプリのデザインをマテリアルデザインにしてくれるToolkit
 
 ## 2. MaterialデザインなしのWPFアプリ <a id="2"></a>
-↓こんなかんじ  
+↓こんなかんじ。イモっぽい！  
 ![画像1](https://user-images.githubusercontent.com/66286964/112943991-2dc0b980-916d-11eb-88cd-50b69cfe5966.png)
 
 
@@ -46,5 +46,5 @@ App.xamlに以下を追加
 
 
 ## 4. 結果 <a id="4"></a>
-↓こんな感じになります。今っぽい！
+↓こんな感じになります。イマっぽい！
 ![画像4](https://user-images.githubusercontent.com/66286964/112943971-28636f00-916d-11eb-9be5-2e1d7b5f7c3b.png)
