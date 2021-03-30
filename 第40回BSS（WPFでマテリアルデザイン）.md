@@ -25,7 +25,7 @@ WPFアプリのデザインをマテリアルデザインにしてくれるToolk
 
 
 ## 3. MaterialDesignInXamlToolkitインストール <a id="3"></a>
-マテリアルデザインを摘要したいプロジェクトにNuGetでパッケージを追加。
+マテリアルデザインを適用したいプロジェクトにNuGetでパッケージを追加。
 ![画像6](https://user-images.githubusercontent.com/66286964/112943990-2d282300-916d-11eb-9e34-3bcf8805c31b.png)
 
 
