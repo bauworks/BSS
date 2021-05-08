@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/spcss.css">
+<script type="text/javascript" src="/js/spjs.js"></script>
+<title>
+    Spring Boot Sample
+</title>
+</head>
+<body>
+    <p class="title">Hello Spring Boot!</p>
+    <form method="post" action="/result">
+        <input name="inputStr" type="text">
+        <button type="submit">送信</button>
+    </form>
+    <h3 th:text="${tag}"></h3>
+    <p th:text="${resultStr}"></p>
+
+</body>
+</html>
