@@ -102,6 +102,7 @@ $ brew install gradle
 ## 1.4 VSCodeにエクステンションパックをインストール
 
 ■ Java Extension Pack
+
 ![Java Extension Pack](https://user-images.githubusercontent.com/19363285/117533786-a39c2880-b029-11eb-885e-b7141689df95.png)
 
 
