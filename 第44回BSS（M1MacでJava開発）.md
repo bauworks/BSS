@@ -8,17 +8,21 @@
 * M1MacでJavaの開発環境を作る
 
 ***目次***
-- [第42回BSS（AsciiDocでドキュメント作成)](#第42回bssasciidocでドキュメント作成)
-  - [1.1 AsciiDocとは](#11-asciidocとは)
-  - [1.2 MarkDownに対するAsciiDocの優位性](#12-markdownに対するasciidocの優位性)
-    - [1.2.1 表現力と可読性](#121-表現力と可読性)
-    - [1.2.2 Markdownの欠点](#122-markdownの欠点)
-    - [1.2.3 AsciiDocの利点](#123-asciidocの利点)
-  - [1.3 AsciiDocの基本的な書き方](#13-asciidocの基本的な書き方)
-    - [1.3.1 AsciiDocプラグイン（VSCode用）](#131-asciidocプラグインvscode用)
-    - [1.3.2 MarkDown記法とAsciiDoc記法の比較](#132-markdown記法とasciidoc記法の比較)
-  - [1.4 GitHub-ActionsでPDFに変換](#14-github-actionsでpdfに変換)
-  - [1.5 参考サイト](#15-参考サイト)
+- [第44回BSS（M1MacでJava開発)](#第44回bssm1macでjava開発)
+  - [1. Java開発環境を作る](#1-java開発環境を作る)
+  - [1.1 Homebrew インストール](#11-homebrew-インストール)
+  - [1.2 AdaptOpenJDK インストール](#12-adaptopenjdk-インストール)
+  - [1.3 Gradle インストール](#13-gradle-インストール)
+  - [1.4 VSCodeにエクステンションパックをインストール](#14-vscodeにエクステンションパックをインストール)
+- [2. Spring BootでミニマムなWebアプリを作成](#2-spring-bootでミニマムなwebアプリを作成)
+  - [2.1 SpringBootプロジェクトを作成する](#21-springbootプロジェクトを作成する)
+  - [2.2 ソースコード](#22-ソースコード)
+    - [■ index.html](#-indexhtml)
+    - [■ spcss.css](#-spcsscss)
+    - [■ spjs.js](#-spjsjs)
+    - [■ SampleController.java](#-samplecontrollerjava)
+  - [2.3 動作確認](#23-動作確認)
+  - [3. 参考サイト](#3-参考サイト)
 
 
 ## 1. Java開発環境を作る
