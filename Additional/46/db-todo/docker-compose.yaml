@@ -1,0 +1,32 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:13.2
+    container_name: postgresql
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpass
+      POSTGRES_DB: db-todo
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    hostname: postgres
+    restart: always
+#   user: root
+
+#  pgadmin4:
+#    image: dpage/pgadmin4:5.1
+#    container_name: pgadmin4
+#    ports:
+#      - 80:80
+#    volumes:
+#      - ./pgadmin:/var/lib/pgadmin
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: root
+#      PGADMIN_DEFAULT_PASSWORD: root
+#      PGADMIN_DEFAULT_EMAIL: admin@abcde.com
+#    hostname: pgadmin4
+#    restart: always

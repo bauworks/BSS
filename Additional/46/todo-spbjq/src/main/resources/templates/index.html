@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<!-- JavaScript -->
+<script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<title>TodoApp</title>
+</head>
+<body>
+  <div class="container">
+    <h3>TodoList</h3>
+    <div class="block">
+
+      <h5>■ 新しいタスクを追加</h5>
+      <div id="add_div" class="block">
+        <input type="text" style="width:20rem" name="title" placeholder="新しいタスク" />
+        <input type="date" style="width:10rem" name="time_limit" />
+        <button type="button" id="add" class="btn waves-effect waves-light">追加</button>
+      </div>
+  
+      <h5>■ マイタスク</h5>
+      <table class="highlight">
+        <thead>
+        </thead>
+        <tbody id="todes">
+          <tr class="todo" th:each="todo : ${todos}">
+            <td class="todo_done">
+              <label>
+                <input type="checkbox" name="done_flg"/>
+                <span></span>
+              </label>
+              <input type="hidden" name="id" th:value="${todo.id}" />
+            </td>
+            <td class="todo_title"><input type="text" style="border:none;" name="title" th:value="${todo.title}"/></td>
+            <td class="todo_time_limit"><input type="date" style="width:10rem;border:none;" name="time_limit" th:value="${todo.time_limit}"/></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h5>■ 完了済</h5>
+    <div class="block">
+      <div style="font-size:20px; color:#1f8076">
+        <span id="done_count">0</span>
+        <span class="pr-3">件完了 </span>
+        <span class="button_for_show" style="display:inline-block"></span>
+      </div>
+
+      <div id="done_table" style="display:none" >
+      <table class="highlight" >
+      <thead>
+      </thead>
+        <tbody id="donetodes">
+          <tr class="todo" th:each="todo : ${doneTodos}">
+            <td class="todo_done">
+              <label>
+                <input type="checkbox"name="done_flg"  class="" checked/>
+                <span></span>
+              </label>
+              <input type="hidden" name="id" th:value="${todo.id}" />
+            </td>
+            <td class="todo_title"><input type="text" style="border:none;text-decoration:line-through" name="title" th:value="${todo.title}"/></td>
+            <td class="todo_time_limit"><input type="date" style="width:10rem;border:none;display:none" name="time_limit" th:value="${todo.time_limit}" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" id="delete" class="btn waves-effect waves-light">完了済みを削除</button>
+      </div>
+    </div>
+    
+  </div>
+  <script type="text/javascript" th:src="@{/js/todo.js}"></script>
+</body>
+</html>
