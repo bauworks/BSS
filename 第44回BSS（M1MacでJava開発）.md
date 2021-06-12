@@ -1,4 +1,4 @@
-# 第44回BSS（M1MacでJava開発)
+# 第44回BSS（M1MacでJava開発）
 
 日時　：2021年 4月28日(水)  
 参加者：古川(発表者)・有川
@@ -8,7 +8,7 @@
 * M1MacでJavaの開発環境を作る
 
 ***目次***
-- [第44回BSS（M1MacでJava開発)](#第44回bssm1macでjava開発)
+- [第44回BSS（M1MacでJava開発）](#第44回bssm1macでjava開発)
   - [1. Java開発環境を作る](#1-java開発環境を作る)
   - [1.1 Homebrew インストール](#11-homebrew-インストール)
   - [1.2 AdaptOpenJDK インストール](#12-adaptopenjdk-インストール)
