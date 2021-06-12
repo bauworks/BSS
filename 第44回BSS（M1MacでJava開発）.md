@@ -10,24 +10,24 @@
 ***目次***
 - [第44回BSS（M1MacでJava開発）](#第44回bssm1macでjava開発)
   - [1. Java開発環境を作る](#1-java開発環境を作る)
-  - [1.1 Homebrew インストール](#11-homebrew-インストール)
-  - [1.2 AdaptOpenJDK インストール](#12-adaptopenjdk-インストール)
-  - [1.3 Gradle インストール](#13-gradle-インストール)
-  - [1.4 VSCodeにエクステンションパックをインストール](#14-vscodeにエクステンションパックをインストール)
-- [2. Spring BootでミニマムなWebアプリを作成](#2-spring-bootでミニマムなwebアプリを作成)
-  - [2.1 SpringBootプロジェクトを作成する](#21-springbootプロジェクトを作成する)
-  - [2.2 ソースコード](#22-ソースコード)
-    - [■ index.html](#-indexhtml)
-    - [■ spcss.css](#-spcsscss)
-    - [■ spjs.js](#-spjsjs)
-    - [■ SampleController.java](#-samplecontrollerjava)
-  - [2.3 動作確認](#23-動作確認)
+    - [1.1 Homebrew インストール](#11-homebrew-インストール)
+    - [1.2 AdaptOpenJDK インストール](#12-adaptopenjdk-インストール)
+    - [1.3 Gradle インストール](#13-gradle-インストール)
+    - [1.4 VSCodeにエクステンションパックをインストール](#14-vscodeにエクステンションパックをインストール)
+  - [2. Spring BootでミニマムなWebアプリを作成](#2-spring-bootでミニマムなwebアプリを作成)
+    - [2.1 SpringBootプロジェクトを作成する](#21-springbootプロジェクトを作成する)
+    - [2.2 ソースコード](#22-ソースコード)
+      - [■ index.html](#-indexhtml)
+      - [■ spcss.css](#-spcsscss)
+      - [■ spjs.js](#-spjsjs)
+      - [■ SampleController.java](#-samplecontrollerjava)
+    - [2.3 動作確認](#23-動作確認)
   - [3. 参考サイト](#3-参考サイト)
 
 
 ## 1. Java開発環境を作る
 
-## 1.1 Homebrew インストール
+### 1.1 Homebrew インストール
 Homebrewは、macOS（またはLinux）用のパッケージマネージャーです。
 
 公式HP：[Homebrew 〜The Missing Package Manager for macOS (or Linux)〜](https://brew.sh/)
@@ -48,7 +48,7 @@ $ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 $ brew --version
 ```
 
-## 1.2 AdaptOpenJDK インストール
+### 1.2 AdaptOpenJDK インストール
 AdoptOpenJDK はコミュニティにより提供される OpenJDK のバイナリです。商用利用でも無償で利用可能です。  
 AdoptOpenJDK を提供してくれるコミュニティについては公式サイトで「Java User Group（JUG）のメンバー、Java開発者、Azul、Amazon、GoDaddy、IBM、jClarity（Microsoftが買収）、Microsoft、New Relic、Pivotal、Red Hatなどのベンダーのコミュニティです。」と説明がされています。
 
@@ -91,7 +91,7 @@ $ export JAVA_HOME=`/usr/libexec/java_home -v 16`
 
 
 
-## 1.3 Gradle インストール
+### 1.3 Gradle インストール
 Gradleは、オープンソースのビルドシステムです。
 同様のツールにMavenがありますが、Gradleでいこうと思います。
 
@@ -99,7 +99,7 @@ Gradleは、オープンソースのビルドシステムです。
 $ brew install gradle
 ```
 
-## 1.4 VSCodeにエクステンションパックをインストール
+### 1.4 VSCodeにエクステンションパックをインストール
 
 ■ Java Extension Pack
 
@@ -107,9 +107,9 @@ $ brew install gradle
 
 
 
-# 2. Spring BootでミニマムなWebアプリを作成
+## 2. Spring BootでミニマムなWebアプリを作成
 
-## 2.1 SpringBootプロジェクトを作成する
+### 2.1 SpringBootプロジェクトを作成する
 
 VSCodeでコマンドパレットを開く(Cmd + Shift + P)
 
@@ -146,8 +146,8 @@ Search for dependencies.
   Thymeleaf
 ```
 
-## 2.2 ソースコード
-### ■ index.html
+### 2.2 ソースコード
+#### ■ index.html
 demo7/src/main/resources/templates/index.html
 ```html
 <!DOCTYPE html>
@@ -173,7 +173,7 @@ demo7/src/main/resources/templates/index.html
 </html>
 ```
 
-### ■ spcss.css
+#### ■ spcss.css
 demo7/src/main/resources/static/css/spcss.css
 ```css
 @charset "UTF-8";
@@ -183,13 +183,13 @@ demo7/src/main/resources/static/css/spcss.css
 }
 ```
 
-### ■ spjs.js
+#### ■ spjs.js
 demo7/src/main/resources/static/js/spjs.js
 ```js
 console.log("読み込めました");
 ```
 
-### ■ SampleController.java
+#### ■ SampleController.java
 demo7/src/main/java/jp/bauworks/demo7/controller/SampleController.java
 ```java
 package jp.bauworks.demo7.controller;
@@ -212,7 +212,7 @@ public class SampleController {
 }
 ```
 
-## 2.3 動作確認
+### 2.3 動作確認
 VSCodeでターミナルを開いて
 ```sh
 $ gradlew bootRun
