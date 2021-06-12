@@ -1,4 +1,4 @@
-# 第48回BSS（JavaScriptのスリープと非同期処理）
+# 第49回BSS（JavaScriptのスリープと非同期処理）
 
 日時　：2021年 6月9日(水)  
 参加者：古川(発表者)・有川・森
@@ -9,7 +9,7 @@
 * JavaScriptの非同期処理をマスターする
   
 ***目次***
-- [第48回BSS（JavaScriptのスリープと非同期処理）](#第48回bssjavascriptのスリープと非同期処理)
+- [第49回BSS（JavaScriptのスリープと非同期処理）](#第49回bssjavascriptのスリープと非同期処理)
   - [1. Reactでの再レンダリング](#1-reactでの再レンダリング)
     - [1.1 Reactコンポーネントの再レンダリング条件](#11-reactコンポーネントの再レンダリング条件)
     - [1.2 React.memo / useCallback / useMemo の使い方](#12-reactmemo--usecallback--usememo-の使い方)
