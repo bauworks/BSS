@@ -9,14 +9,19 @@
 * JavaScriptの非同期処理をマスターする
   
 ***目次***
-- [第47回BSS（ReactでToDoアプリ）](#第47回bssreactでtodoアプリ)
-  - [1. ToDoアプリを作成（React）](#1-todoアプリを作成react)
-  - [1.1 データベースの準備](#11-データベースの準備)
-  - [1.2 Webサービスの準備](#12-webサービスの準備)
-  - [1.2 ソースコード](#12-ソースコード)
-  - [1.3 ToDoアプリを起動](#13-todoアプリを起動)
-  - [1.4 動作確認](#14-動作確認)
-  - [2. 参考サイト](#2-参考サイト)
+- [第48回BSS（JavaScriptのスリープと非同期処理）](#第48回bssjavascriptのスリープと非同期処理)
+  - [1. Reactでの再レンダリング](#1-reactでの再レンダリング)
+    - [1.1 Reactコンポーネントの再レンダリング条件](#11-reactコンポーネントの再レンダリング条件)
+    - [1.2 React.memo / useCallback / useMemo の使い方](#12-reactmemo--usecallback--usememo-の使い方)
+    - [1.3 参考サイト](#13-参考サイト)
+  - [2. JavaScriptのSleepと非同期処理](#2-javascriptのsleepと非同期処理)
+    - [2.1 JavaScriptのSleep関数を実装する](#21-javascriptのsleep関数を実装する)
+    - [2.2 setTimeout()とコールバック地獄](#22-settimeoutとコールバック地獄)
+    - [2.3 Promiseで解決](#23-promiseで解決)
+    - [2.4 async/awaitでスッキリ](#24-asyncawaitでスッキリ)
+    - [2.5 (おまけ)Promis.allで並列処理](#25-おまけpromisallで並列処理)
+    - [2.6 Sleep処理を作成](#26-sleep処理を作成)
+    - [2.7 参考サイト](#27-参考サイト)
 
 
 ## 1. Reactでの再レンダリング
@@ -80,7 +85,7 @@ func(100);
 
 ### 2.2 setTimeout()とコールバック地獄
 
-#### 間違ったsetTimeout()の使い方
+■ 間違ったsetTimeout()の使い方
 
 ```js
 const func = (data) => {
@@ -97,7 +102,7 @@ const func = (data) => {
 func(100);
 ```
 
-#### 正しいsetTimeout()の使い方
+■ 正しいsetTimeout()の使い方
 ```js
 const func = (data) => {
     setTimeout(() => {
@@ -115,7 +120,7 @@ func(100);
 ```
 
 
-#### コールバック地獄
+■ コールバック地獄
 ```js
 const func = (data) => {
     setTimeout(() => {
