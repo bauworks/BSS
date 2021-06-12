@@ -85,7 +85,7 @@ func(100);
 
 ### 2.2 setTimeout()とコールバック地獄
 
-■ 間違ったsetTimeout()の使い方
+■ Sleep目的での間違ったsetTimeout()の使い方
 
 ```js
 const func = (data) => {
@@ -101,8 +101,9 @@ const func = (data) => {
 };
 func(100);
 ```
+※ ２が先に動いてしまう。並列実行が目的ならOK
 
-■ 正しいsetTimeout()の使い方
+■ Sleep目的での正しい使い方
 ```js
 const func = (data) => {
     setTimeout(() => {
