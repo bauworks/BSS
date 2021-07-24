@@ -325,12 +325,12 @@ export const TilesBoard: React.FC<Props> = (props: Props) => {
         // 下移動で失敗した場合は、次のブロックを出現させる。置けない場合はゲームオーバー
         if (nextProps.y > bfProps.y) {
 
-          // １列揃った行があればその列を削除する
+          // １列揃ったラインがあればそのラインを削除する
           newTilesInfo = newTilesInfo.filter((rowInfo: number[]) => {
             return !(rowInfo.every((info)=>info !== 0))
           });
 
-          // 削除されて不足した列を挿入
+          // 削除されて不足したラインを挿入
           for (let rows = newTilesInfo.length; rows < tilesInfo.length; rows++) {
             // const infos: number[] = new Array<number>(tilesInfo[0].length).fill(0);
             const infos: number[] = new Array<number>(props.width).fill(0);

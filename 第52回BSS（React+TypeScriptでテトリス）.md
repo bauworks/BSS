@@ -50,10 +50,10 @@ $ docker exec -it tetris /bin/sh
 
 ■ `docker-compose.yaml` を以下のように編集すると次回以降は自動起動します。
 ```
-    # <<yarn install 実施後>>
-    command: sh -c "cd reactapp && yarn start"
+# <<yarn install 実施後>>
+command: sh -c "cd reactapp && yarn start"
 ```
-（commandをコメントアウト）
+（command実行のコメントアウトをはずす）
 
 ## 2. テトリスを実現するための要所
 
@@ -161,7 +161,7 @@ const downBlock = () => {
 
 ### 2.4 キーイベント処理
 
-KeyDownイベントリスナーを登録
+初回時にキー押下イベントリスナーを登録
 ```ts
 useEffect(() => {
     document.addEventListener("keydown", keyDown, false);
@@ -190,7 +190,7 @@ const keyDown = useCallback((event: { keyCode: number; }) => {
 ```
 
 ### 2.5 ブロックの移動や回転の可不可判定
-ここでは掲載しないが、移動前のブロックを白(0)に戻してから下記処理で判定する。
+ここでは掲載しないが、移動前のブロックを白(0)に戻してから下記処理で判定する。<br>
 基準座標から配置されるタイルがボードをはみ出たり、すでにブロックが置いてある場合は設置不可と判定
 
 ```ts
@@ -241,7 +241,7 @@ const checkPutBlock = (
 ```
 
 ### 2.6 ブロックのセット
-ブロックにはブロックの種類に対応したカラー番号が渡される。
+`block`にはブロックの種類に対応したカラー番号が渡される。
 ```ts
 allTiles[ y + blockPatterns[block][rotate][0][1] ][ x + blockPatterns[block][rotate][0][0] ] = block;
 allTiles[ y + blockPatterns[block][rotate][1][1] ][ x + blockPatterns[block][rotate][1][0] ] = block;
@@ -251,12 +251,12 @@ allTiles[ y + blockPatterns[block][rotate][3][1] ][ x + blockPatterns[block][rot
 
 ### 2.7 一列揃ったラインの削除
 ```ts
-// １列揃った行があればその列を削除する
+// １列揃ったラインがあればそのラインを削除する
 newTilesInfo = newTilesInfo.filter((rowInfo: number[]) => {
     return !(rowInfo.every((info)=>info !== 0))
 });
 
-// 削除されて不足した列を挿入
+// 削除されて不足したラインを挿入
 for (let rows = newTilesInfo.length; rows < tilesInfo.length; rows++) {
     const infos: number[] = new Array<number>(props.width).fill(0);
     newTilesInfo.unshift(infos);
