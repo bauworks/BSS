@@ -1,0 +1,14 @@
+version: "3"
+services:
+  reactapp:
+    container_name: tetris
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    # <<yarn install 実施後>>
+    # command: sh -c "cd reactapp && yarn start"
