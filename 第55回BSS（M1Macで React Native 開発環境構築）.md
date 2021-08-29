@@ -255,7 +255,7 @@ $ npm start
 1. 左サイドバーの CONNECTION のラジオボタン[Tunnel] を選択
 1. 下のQRコードを「EXPO GO」をインストールしたiPhoneのカメラで読み取ってアクセスする。  
 
-  ■ Expo Go
+  ■ Expo Go  
   ![Expo Go](https://user-images.githubusercontent.com/19363285/128731004-905f9c5f-cdef-4de0-9bee-8d44fcf2a9b8.jpeg)
 
 ## 3. 参考サイト
