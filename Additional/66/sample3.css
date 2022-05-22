@@ -1,0 +1,32 @@
+/* コンテナ */
+#container {
+    display: grid;
+    grid-template:
+        "areaA areaB areaC" 100px
+        "areaD areaE areaF" 100px
+        / 200px 200px 200px;
+}
+
+#container > div {
+    border: 2px solid rgb(233,171,88);
+}
+
+/* アイテム */
+#itemA {
+    grid-area: areaA;
+}
+#itemB {
+    grid-area: areaB;
+}
+#itemC {
+    grid-area: areaC;
+}
+#itemD {
+    grid-area: areaD;
+}
+#itemE {
+    grid-area: areaE;
+}
+#itemF {
+    grid-area: areaF;
+}
